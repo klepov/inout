@@ -282,10 +282,33 @@
   .pm-kpi .k .kt{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:5px}
   .pm-kpi .k .vv{font-size:13px;color:var(--ink-soft);line-height:1.45;font-weight:500}
 
+  /* ---------- SUPPORT ---------- */
+  .concept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .concept{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+  .concept .ic{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .concept .ic svg{width:20px;height:20px}
+  .concept.c1 .ic{background:var(--accent-soft);color:var(--accent)}
+  .concept.c2 .ic{background:#eaf5ec;color:#15803d}
+  .concept.c3 .ic{background:#faf3ea;color:var(--gold)}
+  .concept h4{font-family:'Manrope',sans-serif;font-size:15.5px;font-weight:700;margin-bottom:6px}
+  .concept .price{font-family:'Manrope',sans-serif;font-weight:700;color:var(--ink);font-size:13px;margin-bottom:8px}
+  .concept p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.55}
+  .plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px}
+  .plan{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column}
+  .plan.rec{border:2px solid var(--accent);box-shadow:var(--shadow-lg)}
+  .plan.pro{border:2px solid var(--gold);box-shadow:var(--shadow-lg)}
+  .plan.pro .rec-badge{background:var(--gold)}
+  .plan .rec-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;white-space:nowrap}
+  .plan h4{font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;margin-bottom:4px}
+  .plan .ph-sub{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+  .plan .pp{font-family:'Manrope',sans-serif;font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+  .plan .pp small{font-size:13px;color:var(--muted);font-weight:500}
+  .plan ul{font-size:13.5px;margin:14px 0 0;padding-left:18px;color:var(--ink-soft)}
+
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:820px){
     .hero-meta{grid-template-columns:1fr 1fr}
-    .phase-grid,.facade-grid,.team-grid,.results .res-grid,.pm-split,.pm-kpi{grid-template-columns:1fr}
+    .phase-grid,.facade-grid,.team-grid,.results .res-grid,.pm-split,.pm-kpi,.concept-grid,.plan-grid{grid-template-columns:1fr}
     .roadmap{grid-template-columns:1fr;gap:14px}
     .road-arrow{transform:rotate(90deg);padding:6px 0}
     .stack-grid{grid-template-columns:1fr}
@@ -317,7 +340,7 @@
     <h1>Цифровая платформа бренда<br><span class="accent">In&amp;Out</span></h1>
     <p class="lead">Премиальная омниканальная платформа интимной продукции с международной архитектурой: динамические платежные шлюзы, каскадная логистика, сопровождение клиентов через мессенджеры и оптимизация под поисковые ИИ-ассистенты.</p>
     <div class="hero-meta">
-      <div class="meta-card"><div class="k">Бюджет проекта</div><div class="v">2 950 000 <small>₽</small></div></div>
+      <div class="meta-card"><div class="k">Бюджет проекта</div><div class="v">2 660 000 <small>₽</small></div></div>
       <div class="meta-card"><div class="k">Срок реализации</div><div class="v">14 <small>недель</small></div></div>
       <div class="meta-card"><div class="k">Этапов</div><div class="v">2 <small>фазы</small></div></div>
       <div class="meta-card"><div class="k">Гео</div><div class="v">СНГ · Азия · США</div></div>
@@ -338,6 +361,7 @@
     <a href="#phase2">Фаза 2</a>
     <a href="#team">Команда</a>
     <a href="#pm">PM</a>
+    <a href="#support">Поддержка</a>
     <a href="#results">Результаты</a>
   </div>
 </nav>
@@ -361,10 +385,10 @@
       <div class="phase-card p1">
         <div class="ph-tag">Фаза 1 · Архитектурное ядро и запуск</div>
         <h4>Живой продукт в промэксплуатации + заложенный фундамент</h4>
-        <div class="ph-price">2 035 000 ₽</div>
+        <div class="ph-price">1 855 000 ₽</div>
         <div class="ph-term">8 недель</div>
         <dl class="kv">
-          <dt>Каталог</dt><dd>1 SKU</dd>
+          <dt>Каталог</dt><dd>3 SKU</dd>
           <dt>Платежи</dt><dd>ЮKassa + фасад (Stripe, Alipay — контракты)</dd>
           <dt>Логистика</dt><dd>СДЭК + фасад (Боксберри, Яндекс Ultima — контракты)</dd>
           <dt>Каналы</dt><dd>Telegram + Email + ядро</dd>
@@ -374,7 +398,7 @@
       <div class="phase-card p2">
         <div class="ph-tag">Фаза 2 · Масштабирование и экспансия</div>
         <h4>Полноценная международная омниканальная платформа</h4>
-        <div class="ph-price">915 000 ₽</div>
+        <div class="ph-price">805 000 ₽</div>
         <div class="ph-term">6 недель</div>
         <dl class="kv">
           <dt>Каталог</dt><dd>20+ SKU собственного производства</dd>
@@ -391,7 +415,7 @@
   <section id="budget">
     <span class="eyebrow">Сводный финансовый расчёт</span>
     <h2>Прозрачная структура бюджета</h2>
-    <p>Фиксированная стоимость по каждому направлению с разбивкой по фазам. Итоговая сумма проекта — <strong>2 950 000 ₽</strong>.</p>
+    <p>Фиксированная стоимость по каждому направлению с разбивкой по фазам. Итоговая сумма проекта — <strong>2 660 000 ₽</strong>.</p>
     <div class="table-wrap">
       <table>
         <thead>
@@ -403,15 +427,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Аналитика, UX/UI дизайн</td><td class="num col-p1">300 000 ₽</td><td class="num col-p2">150 000 ₽</td><td class="num">450 000 ₽</td></tr>
-          <tr><td>Backend-разработка (Django + фасады + CMS + i18n)</td><td class="num col-p1">710 000 ₽</td><td class="num col-p2">200 000 ₽</td><td class="num">910 000 ₽</td></tr>
-          <tr><td>Frontend-разработка (React / Vite + SSG + карты ПВЗ)</td><td class="num col-p1">350 000 ₽</td><td class="num col-p2">200 000 ₽</td><td class="num">550 000 ₽</td></tr>
+          <tr><td>Backend-разработка (Django + фасады + CMS + i18n + аналитика)</td><td class="num col-p1">785 000 ₽</td><td class="num col-p2">225 000 ₽</td><td class="num">1 010 000 ₽</td></tr>
+          <tr><td>Frontend-разработка (React / Vite + SSG + карты ПВЗ + аналитика)</td><td class="num col-p1">395 000 ₽</td><td class="num col-p2">215 000 ₽</td><td class="num">610 000 ₽</td></tr>
           <tr><td>Омниканальный чат-модуль (Telegram + ядро поддержки)</td><td class="num col-p1">240 000 ₽</td><td class="num col-p2">70 000 ₽</td><td class="num">310 000 ₽</td></tr>
           <tr><td>DevOps (CI/CD, Docker, мониторинг)</td><td class="num col-p1">130 000 ₽</td><td class="num col-p2">90 000 ₽</td><td class="num">220 000 ₽</td></tr>
           <tr><td>Интеграционное и сквозное QA-тестирование</td><td class="num col-p1">90 000 ₽</td><td class="num col-p2">70 000 ₽</td><td class="num">160 000 ₽</td></tr>
           <tr><td>Управление проектом и гарантийные риски</td><td class="num col-p1">180 000 ₽</td><td class="num col-p2">120 000 ₽</td><td class="num">300 000 ₽</td></tr>
           <tr><td>Аренда серверов и лицензии ПО (хостинг, трекер)</td><td class="num col-p1">35 000 ₽</td><td class="num col-p2">15 000 ₽</td><td class="num">50 000 ₽</td></tr>
-          <tr class="total"><td>ИТОГО</td><td class="num">2 035 000 ₽</td><td class="num">915 000 ₽</td><td class="num">2 950 000 ₽</td></tr>
+          <tr class="total"><td>ИТОГО</td><td class="num">1 855 000 ₽</td><td class="num">805 000 ₽</td><td class="num">2 660 000 ₽</td></tr>
         </tbody>
       </table>
     </div>
@@ -449,7 +472,7 @@
   <!-- ===== CORE / FACADES ===== -->
   <section id="core">
     <span class="eyebrow">Архитектурное ядро</span>
-    <h2>Пять опор премиальной платформы</h2>
+    <h2>Шесть опор премиальной платформы</h2>
     <div class="facade-grid">
       <div class="facade">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
@@ -471,6 +494,11 @@
         <h4>Интернационализация (i18n)</h4>
         <p>Одновременное хранение текстов на нескольких языках в структуре БД. Базово RU/EN, архитектурно готово под азиатские локали.</p>
       </div>
+      <div class="facade">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
+        <h4>Аналитика (Analytics Facade)</h4>
+        <p>Единый интерфейс <code>track(event, payload)</code> с адаптерами. Я.Метрика в Фазе 1 (e-commerce-трекинг), готовность под Amplitude/Firebase в Фазе 2. Server-side отправка money-событий (purchase, refund) как источник правды.</p>
+      </div>
       <div class="facade" style="grid-column:1 / -1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h4>Оптимизация под ИИ-агентов (LLO)</h4>
@@ -483,7 +511,7 @@
   <section id="phase1">
     <span class="eyebrow">Фаза 1 — детально</span>
     <h2>Архитектурное ядро и запуск</h2>
-    <p>Запуск жизнеспособного продукта в промышленной эксплуатации с поддержкой первого SKU, сквозной оплатой и сопровождением клиента через Telegram. Одновременно закладывается полный набор абстрактных фасадов с первой рабочей интеграцией каждого.</p>
+    <p>Запуск жизнеспособного продукта в промышленной эксплуатации с поддержкой каталога из 3 SKU, сквозной оплатой и сопровождением клиента через Telegram. Одновременно закладывается полный набор абстрактных фасадов с первой рабочей интеграцией каждого.</p>
 
     <h3>Масштабирование и интеграции в Фазе 1</h3>
     <ul>
@@ -491,6 +519,7 @@
       <li><strong>Мультиэквайринг.</strong> Паттерн «Стратегия» + адаптер ЮKassa + динамический выбор провайдера по гео/языку/валюте. Готов к подключению Stripe и Alipay.</li>
       <li><strong>Омниканальное сопровождение.</strong> Абстрактное транспортное ядро + Telegram и Email. Готово к подключению WeChat, Line, WhatsApp.</li>
       <li><strong>i18n.</strong> Структура БД под одновременное хранение RU/EN, архитектурно готова под азиатские языки.</li>
+      <li><strong>Аналитика (Analytics Facade).</strong> Абстрактный интерфейс <code>track(event, payload)</code> + адаптер Яндекс.Метрики с e-commerce-трекингом. Server-side отправка money-событий (purchase, refund) из обработчика вебхука ЮKassa как источник правды; client-side — поведенческие события. Готов к подключению Amplitude и Firebase.</li>
     </ul>
 
     <h3>Технологический стек</h3>
@@ -557,7 +586,7 @@
       <li><strong>Логистика.</strong> Адаптеры Боксберри и Яндекс.Доставки (Ultima) с фирменными ПВЗ/отделениями + международные операторы. Каскадный механизм приоритизации переводится в полноценную эксплуатацию.</li>
       <li><strong>Платежи.</strong> Адаптеры Stripe и Alipay — полный набор шлюзов для СНГ, западных и азиатских рынков.</li>
       <li><strong>Каналы.</strong> WeChat, Line, WhatsApp как транспортные адаптеры в рамках ядра Фазы 1.</li>
-      <li><strong>Каталог.</strong> Переход с единичного SKU на 20+ позиций собственного производства с расширенной товарной матрицей и мультиязычными описаниями в CMS.</li>
+      <li><strong>Каталог.</strong> Расширение с 3 SKU до 20+ позиций собственного производства с расширенной товарной матрицей и мультиязычными описаниями в CMS.</li>
       <li><strong>i18n.</strong> Азиатские языковые контуры поверх готовой структуры БД.</li>
     </ul>
 
@@ -620,7 +649,7 @@
     <div class="pm-card" id="pm">
       <span class="pm-tag">⬗ Позиция: Руководитель проекта (Project Manager)</span>
       <h3>Управление сроками, бюджетом и рисками обеих фаз</h3>
-      <p class="pm-lead">Ключевая операционная роль: обеспечивает сдачу платформы в срок (14 недель), в рамках бюджета (2 950 000 ₽) и с заданным уровнем качества. Единственная точка контакта для заказчика и инвесторов по статусу проекта.</p>
+      <p class="pm-lead">Ключевая операционная роль: обеспечивает сдачу платформы в срок (14 недель), в рамках бюджета (2 660 000 ₽) и с заданным уровнем качества. Единственная точка контакта для заказчика и инвесторов по статусу проекта.</p>
       <div class="pm-split">
         <div>
           <h4>Зоны ответственности</h4>
@@ -645,11 +674,89 @@
       </div>
       <div class="pm-kpi">
         <div class="k"><div class="kt">Сроки</div><div class="vv">Milestone'ы Ф1 / Ф2, отклонение ≤ ±5%</div></div>
-        <div class="k"><div class="kt">Бюджет</div><div class="vv">2 950 000 ₽ без перерасхода</div></div>
+        <div class="k"><div class="kt">Бюджет</div><div class="vv">2 660 000 ₽ без перерасхода</div></div>
         <div class="k"><div class="kt">Качество</div><div class="vv">Приёмка с 1-й попытки, SLA по дефектам</div></div>
         <div class="k"><div class="kt">Масштаб</div><div class="vv">Контракты фасадов готовы к Фазе 2</div></div>
       </div>
     </div>
+  </section>
+
+  <!-- ===== SUPPORT ===== -->
+  <section id="support">
+    <span class="eyebrow">Поддержка и сопровождение</span>
+    <h2>Гарантия и поддержка после сдачи</h2>
+    <p class="lead">Стоимость разработки (2 660 000 ₽) — это <strong>создание</strong> платформы. После сдачи она живёт в промэксплуатации: инциденты, обновления интеграций, доработки. Чёткая модель сопровождения снимает неопределённость для заказчика и формирует предсказуемый бюджет поддержки.</p>
+
+    <h3>Три разные сущности — не смешивать</h3>
+    <p>Большинство конфликтов после сдачи возникает из-за путаницы между этими тремя понятиями. Модель разводит их явно.</p>
+    <div class="concept-grid">
+      <div class="concept c1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h4>Гарантия</h4>
+        <div class="price">Бесплатно · 60 дней после сдачи</div>
+        <p>Исправление дефектов, не соответствующих утверждённой спецификации. «Работало по ТЗ, а теперь ведёт себя иначе» = баг.</p>
+      </div>
+      <div class="concept c2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.7-.6-.6-2.7 2.1-2.1z"/></svg></div>
+        <h4>Поддержка (Support)</h4>
+        <div class="price">Retainer · от 70 000 ₽/мес</div>
+        <p>Удержание платформы в рабочем состоянии: инциденты, обновления, мониторинг. После гарантии или параллельно с разработкой новой фазы.</p>
+      </div>
+      <div class="concept c3">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg></div>
+        <h4>Фича (Feature)</h4>
+        <div class="price">Отдельная смета · 4 000 ₽/час</div>
+        <p>Новая функциональность, которой не было в ТЗ. Всегда отдельная оценка, даже «мелкая».</p>
+      </div>
+    </div>
+
+    <h3>Пакеты сопровождения (Retainer)</h3>
+    <p>Фиксированный объём часов в месяц по абонентской плате. Базовая ставка — <strong>4 000 ₽/час</strong>, часы сверх пакета — <strong>5 000 ₽/час</strong>. Неиспользованные часы переносятся до 1 месяца, далее сгорают.</p>
+    <div class="plan-grid">
+      <div class="plan rec">
+        <span class="rec-badge">Базовый режим</span>
+        <h4>Стандарт</h4>
+        <div class="ph-sub">Установившаяся эксплуатация</div>
+        <div class="pp">70 000 <small>₽/мес</small></div>
+        <ul>
+          <li>20 часов в месяц</li>
+          <li>Реакция на Critical — 2 часа</li>
+          <li>Мониторинг (Sentry, аптайм)</li>
+          <li>Выделенный канал поддержки</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <span class="rec-badge">Первый квартал после запуска</span>
+        <h4>Про</h4>
+        <div class="ph-sub">Активная доработка и стабилизация</div>
+        <div class="pp">120 000 <small>₽/мес</small></div>
+        <ul>
+          <li>40 часов в месяц</li>
+          <li>Реакция на Critical — 1 час</li>
+          <li>Мониторинг + дашборды</li>
+          <li>Приоритетная очередь</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">⬗ <strong>Рекомендуемая схема финансирования:</strong> первый квартал после запуска — пакет «Про» (активный период: стабилизация, доработки, настройка аналитики и воронок), далее переход на «Стандарт» при установившемся режиме. Это закладывает достаточную ёмкость на бурный старт и исключает потребность в незапланированных доплатах.</div>
+
+    <h3>SLA: приоритеты инцидентов</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Приоритет</th><th>Определение</th><th class="num">Реакция</th><th class="num">Решение</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Critical (P1)</strong></td><td>Сервис недоступен; оплата не работает; потеря данных</td><td class="num">1–2 ч</td><td class="num">8 ч</td></tr>
+          <tr><td><strong>High (P2)</strong></td><td>Часть функционала недоступна; нет обходного пути</td><td class="num">4 ч</td><td class="num">24 ч</td></tr>
+          <tr><td><strong>Normal (P3)</strong></td><td>Баг с обходным путём; некритичная функция</td><td class="num">1 раб. день</td><td class="num">3 раб. дня</td></tr>
+          <tr><td><strong>Low (P4)</strong></td><td>Косметика, опечатки, мелкие UI-несоответствия</td><td class="num">3 раб. дня</td><td class="num">Next release</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">⬗ <strong>Новые функции (фичи)</strong> — любое расширение функциональности, не предусмотренное спецификацией, оценивается отдельно: запрос → классификация (дефект или фича) → почасовая оценка с разбивкой по ролям → письменное согласование → реализация. Даже «мелкие» доработки не размазываются в поддержку.</div>
   </section>
 
   <!-- ===== RESULTS ===== -->
@@ -674,7 +781,7 @@
 </main>
 
 <footer>
-  <p><strong>In&amp;Out</strong> · Технико-коммерческое предложение · Сводный бюджет 2 950 000 ₽ · 14 недель</p>
+  <p><strong>In&amp;Out</strong> · Технико-коммерческое предложение · Сводный бюджет 2 660 000 ₽ · 14 недель</p>
   <p style="margin-top:6px">Детализированные сметы, технологические спецификации и анализ рисков — в приложениях <code>cp-phase-1.md</code> и <code>cp-phase-2.md</code>.</p>
 </footer>
 
